@@ -178,6 +178,25 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
+
+'classoptions': ',english',
+'inputenc': '',
+'utf8extra': '',
+'preamble': r'''\usepackage{fontspec}
+
+\usepackage{xeCJK}
+\xeCJKsetup{AutoFakeBold=true, AutoFakeSlant=true}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKsansfont{WenQuanYi Micro Hei}
+\setCJKmonofont{WenQuanYi Micro Hei}
+
+\defaultfontfeatures{Mapping=tex-text}
+\XeTeXlinebreaklocale "zh"
+\setlength\parindent{0em}
+\setlength\parskip{0.5em}
+\linespread{1.5}
+
+''',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
