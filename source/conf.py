@@ -187,6 +187,7 @@ latex_elements = {
 \usepackage{xeCJK}
 \xeCJKsetup{AutoFakeBold=true, AutoFakeSlant=true}
 \setCJKmainfont{WenQuanYi Micro Hei}
+%%\setCJKmainfont[BoldFont=, ItalicFont=, BoldItalicFont=, SlantedFont=, BoldSlantedFont=, SmallCapsFont=,]{WenQuanYi Micro Hei}
 \setCJKsansfont{WenQuanYi Micro Hei}
 \setCJKmonofont{WenQuanYi Micro Hei}
 
