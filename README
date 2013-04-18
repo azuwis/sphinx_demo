@@ -1,0 +1,23 @@
+install this packages on Debian:
+
+    python-sphinx
+    texlive-xetex
+    texlive-latex-recommended
+    texlive-latex-extra
+    lmodern
+
+if you want livereload(https://github.com/mockko/livereload), install `python-pip`, and run:
+
+    $ pip install livereload
+
+to generate HTML:
+
+    $ make html
+
+to generate PDF:
+
+    $ make latex
+
+to use livereload:
+
+    $ make livehtml
