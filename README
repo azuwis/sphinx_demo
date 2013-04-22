@@ -16,7 +16,7 @@ to generate HTML:
 
 to generate PDF:
 
-    $ make latex
+    $ make latexpdf
 
 to use livereload:
 
