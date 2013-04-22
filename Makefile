@@ -159,3 +159,9 @@ doctest:
 
 livehtml: html
 	livereload -p 8000 -b $(BUILDDIR)/html
+
+chm: htmlhelp
+	@sed -i -e 's/\\/\//' $(BUILDDIR)/htmlhelp/*.hhp
+	@cd $(BUILDDIR)/htmlhelp && chmcmd *.hhp
+	@echo
+	@echo "Build finished. The CHM are in $(BUILDDIR)/htmlhelp."

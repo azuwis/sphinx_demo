@@ -21,3 +21,7 @@ to generate PDF:
 to use livereload:
 
     $ make livehtml
+
+to generate CHM, install `fp-utils`, and run:
+
+    $ make chm
