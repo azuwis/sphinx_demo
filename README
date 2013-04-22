@@ -1,27 +1,29 @@
-install this packages on Debian:
+Install this packages on Debian:
 
     python-sphinx
     texlive-xetex
     texlive-latex-recommended
     texlive-latex-extra
     lmodern
+    ttf-wqy-microhei
 
-if you want livereload(https://github.com/mockko/livereload), install `python-pip`, and run:
-
-    $ pip install livereload
-
-to generate HTML:
+To generate HTML:
 
     $ make html
 
-to generate PDF:
+To generate PDF:
 
     $ make latexpdf
 
-to use livereload:
+To use livereload(https://github.com/mockko/livereload), install `python-pip`, and run:
 
+    $ pip install livereload
     $ make livehtml
 
-to generate CHM, install `fp-utils`, and run:
+To generate CHM, install `fp-utils`, and run:
 
     $ make chm
+
+Tested with `python-sphinx 1.1.3` and `texlive 2012.20120611` on Debian unstable.
+
+To use other CJK fonts, modify `latex_elements` option in source/conf.py. For more info, read http://mirrors.ctan.org/macros/xetex/latex/xecjk/xeCJK.pdf
