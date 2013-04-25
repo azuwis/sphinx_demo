@@ -12,6 +12,7 @@
    :maxdepth: 2
 
    demo
+   test
 
 
 附录
