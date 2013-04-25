@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Test Project's documentation!
-========================================
+测试文档
+========
 
-Contents:
+目录:
 
 .. toctree::
    :maxdepth: 2
@@ -14,8 +14,8 @@ Contents:
    demo
 
 
-Indices and tables
-==================
+附录
+====
 
 * :ref:`genindex`
 * :ref:`modindex`
