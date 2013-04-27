@@ -174,3 +174,10 @@ slides:
 liveslides: slides
 	@sed -i -e 's/html/slides/' Guardfile
 	livereload -p 8000 -b $(BUILDDIR)/slides
+
+publish: html chm latexpdf
+	@mkdir -p $(BUILDDIR)/html/_download
+	@cp $(BUILDDIR)/htmlhelp/*.chm $(BUILDDIR)/html/_download
+	@cp $(BUILDDIR)/latex/*.pdf $(BUILDDIR)/html/_download
+	@echo
+	@echo "Publish finished."
