@@ -165,3 +165,12 @@ chm: htmlhelp
 	@cd $(BUILDDIR)/htmlhelp && chmcmd *.hhp
 	@echo
 	@echo "Build finished. The CHM are in $(BUILDDIR)/htmlhelp."
+
+slides:
+	@echo "You need to add 'hieroglyph' to extensions option in conf.py"
+	$(SPHINXBUILD) -b slides $(ALLSPHINXOPTS) $(BUILDDIR)/slides
+	@echo "Build finished. The HTML slides are in $(BUILDDIR)/slides."
+
+liveslides: slides
+	@sed -i -e 's/html/slides/' Guardfile
+	livereload -p 8000 -b $(BUILDDIR)/slides
