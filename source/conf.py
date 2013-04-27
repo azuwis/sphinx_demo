@@ -198,9 +198,9 @@ latex_elements = {
 
 \defaultfontfeatures{Mapping=tex-text}
 \XeTeXlinebreaklocale "zh"
-\setlength\parindent{0em}
+\setlength\parindent{2em}
 \setlength\parskip{0.5em}
-\linespread{1.5}
+\linespread{1.2}
 
 ''',
 }
