@@ -9,16 +9,7 @@
 目录:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: -1
 
    demo
    test
-
-
-附录
-====
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
