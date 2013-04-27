@@ -162,7 +162,7 @@ livehtml: html
 
 chm: htmlhelp
 	@sed -i -e 's/\\/\//' $(BUILDDIR)/htmlhelp/*.hhp
-	@cd $(BUILDDIR)/htmlhelp && chmcmd *.hhp
+	@cd $(BUILDDIR)/htmlhelp && chmcmd *.hhp && chmod 644 *.chm
 	@echo
 	@echo "Build finished. The CHM are in $(BUILDDIR)/htmlhelp."
 
