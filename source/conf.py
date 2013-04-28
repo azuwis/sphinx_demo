@@ -169,7 +169,7 @@ html_show_sphinx = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = project
+htmlhelp_basename = '%s_v%s' % (project, version)
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -208,7 +208,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', project + '.tex', project,
+  ('index', '%s_v%s.tex' % (project,version), project,
    author, 'manual'),
 ]
 
