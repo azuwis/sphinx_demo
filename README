@@ -1,6 +1,6 @@
 Install this packages on Debian:
 
-    $ sudo apt-get install python-sphinx texlive-xetex texlive-latex-recommended texlive-latex-extra lmodern ttf-wqy-microhei
+    # apt-get install --no-install-recommends python-sphinx texlive-xetex texlive-latex-recommended texlive-latex-extra lmodern ttf-wqy-microhei make
 
 To generate HTML:
 
