@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. 样例 &mdash; Sphinx入门 v1.0</title>
+    
+    <link rel="stylesheet" href="_static/default_mod.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Sphinx入门 v1.0" href="index.html" />
+    <link rel="next" title="4. reStructuredText 入门" href="rest.html" />
+    <link rel="prev" title="2. 使用" href="usage.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="rest.html" title="4. reStructuredText 入门"
+             accesskey="N">下一页</a></li>
+        <li class="right" >
+          <a href="usage.html" title="2. 使用"
+             accesskey="P">上一页</a> |</li>
+        <li><a href="index.html">Sphinx入门 v1.0</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>3. 样例<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="contents local topic" id="id2">
+<p class="topic-title first">本节内容</p>
+<ul class="simple">
+<li><a class="reference internal" href="#id3" id="id25">标题</a></li>
+<li><a class="reference internal" href="#id4" id="id26">段落</a></li>
+<li><a class="reference internal" href="#id5" id="id27">文字强调</a></li>
+<li><a class="reference internal" href="#id6" id="id28">图片</a></li>
+<li><a class="reference internal" href="#id7" id="id29">链接</a></li>
+<li><a class="reference internal" href="#id11" id="id30">引用</a><ul>
+<li><a class="reference internal" href="#line-blocks" id="id31">Line-blocks</a></li>
+<li><a class="reference internal" href="#literal-blocks" id="id32">Literal-blocks</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#footnote" id="id33">脚注(Footnote)</a></li>
+<li><a class="reference internal" href="#id13" id="id34">代码段</a><ul>
+<li><a class="reference internal" href="#ruby" id="id35">ruby代码样例</a></li>
+<li><a class="reference internal" href="#java" id="id36">java代码样例</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id14" id="id37">列表</a><ul>
+<li><a class="reference internal" href="#id15" id="id38">无序列表</a></li>
+<li><a class="reference internal" href="#id16" id="id39">有序列表</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id17" id="id40">表格</a><ul>
+<li><a class="reference internal" href="#id18" id="id41">简单表格</a></li>
+<li><a class="reference internal" href="#id19" id="id42">网格表格</a></li>
+<li><a class="reference internal" href="#list-table" id="id43">列表表格(List-table)</a></li>
+<li><a class="reference internal" href="#id20" id="id44">外部表格</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#field-lists" id="id45">字段列表(Field lists)</a></li>
+<li><a class="reference internal" href="#sidebar" id="id46">边栏(Sidebar)</a></li>
+<li><a class="reference internal" href="#admonitions" id="id47">箴言(Admonitions)</a></li>
+<li><a class="reference internal" href="#substitution" id="id48">替代(Substitution)</a></li>
+<li><a class="reference internal" href="#html" id="id49">内嵌HTML</a></li>
+<li><a class="reference internal" href="#id21" id="id50">自动生成目录</a></li>
+<li><a class="reference internal" href="#id22" id="id51">锚点跳转</a></li>
+<li><a class="reference internal" href="#css" id="id52">CSS样式</a></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2><a class="toc-backref" href="#id25">3.1. 标题</a><a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python"><pre>一级标题
+========
+
+二级标题
+--------
+
+三级标题
+~~~~~~~~
+
+四级标题
+^^^^^^^^</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>中文占两个字符宽度。标题和标记并不强制要求对齐。</p>
+<p>也可以用以下的形式:</p>
+<div class="last highlight-python"><pre>====
+标题
+====</pre>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2><a class="toc-backref" href="#id26">3.2. 段落</a><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>段落不需要特殊标记，有缩进的段落生成的结果也会有缩进。</p>
+<p>段落用一个空行隔开，换行只会产生一个空格。</p>
+<p>源码:</p>
+<div class="highlight-python"><pre>第一段
+换行
+
+第二段
+
+    缩进第一段
+
+    缩进第二段</pre>
+</div>
+<p>结果:</p>
+<p>第一段
+换行</p>
+<p>第二段</p>
+<blockquote>
+<div><p>缩进第一段</p>
+<p>缩进第二段</p>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2><a class="toc-backref" href="#id27">3.3. 文字强调</a><a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="53%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">源码</th>
+<th class="head">结果</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">支持对\</span> <span class="pre">*文字*\</span> <span class="pre">的\</span> <span class="pre">**强调**</span></tt></td>
+<td>支持对<em>文字</em>的<strong>强调</strong></td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">*emphasis*</span> <span class="pre">and</span> <span class="pre">**strong</span> <span class="pre">emphasis**</span></tt></td>
+<td><em>emphasis</em> and <strong>strong emphasis</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>中文问题</p>
+<p>reStructuredText的特殊标记一般需要两侧是空格或者行首末，英文用空格隔开单词，所以不需要作特殊处理。</p>
+<p class="last">而中文则很可能需要两侧添加<tt class="docutils literal"><span class="pre">\空格</span></tt>。</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2><a class="toc-backref" href="#id28">3.4. 图片</a><a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">源码</th>
+<th class="head">结果</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">..</span> <span class="pre">image::</span> <span class="pre">images/ball1.gif</span></tt></td>
+<td><img alt="_images/ball1.gif" class="first last" src="_images/ball1.gif" />
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">..</span> <span class="pre">image::</span> <span class="pre">http://www.w3schools.com/images/pulpit.jpg</span></tt></td>
+<td><img alt="http://www.w3schools.com/images/pulpit.jpg" class="first last" src="http://www.w3schools.com/images/pulpit.jpg" />
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">路径相对于<cite>conf.py</cite>所在目录。生成的PDF不支持外链图片。</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h2><a class="toc-backref" href="#id29">3.5. 链接</a><a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="52%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">源码</th>
+<th class="head">结果</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last highlight-python"><pre>http://example.com</pre>
+</div>
+</td>
+<td><a class="reference external" href="http://example.com">http://example.com</a></td>
+</tr>
+<tr class="row-odd"><td><div class="first last highlight-python"><pre>This is a `link &lt;http://example.com&gt;`_</pre>
+</div>
+</td>
+<td>This is a <a class="reference external" href="http://example.com">link</a></td>
+</tr>
+<tr class="row-even"><td><div class="first last highlight-python"><pre>这是一个\ `链接 &lt;http://example.com&gt;`_</pre>
+</div>
+</td>
+<td>这是一个<a class="reference external" href="http://example.com">链接</a></td>
+</tr>
+<tr class="row-odd"><td><div class="first last highlight-python"><pre>这也是一个\ `链接`_，\ `另一个链接`_
+
+.. _`链接`: http://example.com
+.. _`另一个链接`: http://example2.com</pre>
+</div>
+</td>
+<td>这也是一个<a class="reference external" href="http://example.com">链接</a>，<a class="reference external" href="http://example2.com">另一个链接</a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">当一段文字里有大量超链接时，推荐使用上面表格里最后一种方式。</p>
+</div>
+</div>
+<div class="section" id="id11">
+<h2><a class="toc-backref" href="#id30">3.6. 引用</a><a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<div class="section" id="line-blocks">
+<h3><a class="toc-backref" href="#id31">3.6.1. Line-blocks</a><a class="headerlink" href="#line-blocks" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>| line-blocks
+| *line-blocks*</pre>
+</div>
+<div class="line-block">
+<div class="line">line-blocks</div>
+<div class="line"><em>line-blocks</em></div>
+</div>
+</div>
+<div class="section" id="literal-blocks">
+<h3><a class="toc-backref" href="#id32">3.6.2. Literal-blocks</a><a class="headerlink" href="#literal-blocks" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>::
+
+    literal-blocks
+    *literal-blocks*</pre>
+</div>
+<div class="highlight-python"><pre>literal-blocks
+*literal-blocks*</pre>
+</div>
+</div>
+</div>
+<div class="section" id="footnote">
+<h2><a class="toc-backref" href="#id33">3.7. 脚注(Footnote)</a><a class="headerlink" href="#footnote" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python"><pre>正文\ [#脚注]_</pre>
+</div>
+<p>正文<a class="footnote-reference" href="#id24" id="id12">[1]</a></p>
+</div>
+<div class="section" id="id13">
+<h2><a class="toc-backref" href="#id34">3.8. 代码段</a><a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<div class="section" id="ruby">
+<h3><a class="toc-backref" href="#id35">3.8.1. ruby代码样例</a><a class="headerlink" href="#ruby" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>.. code-block:: ruby
+
+   #!/usr/bin/ruby
+   ...</pre>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="c1">#!/usr/bin/ruby</span>
+<span class="k">class</span> <span class="nc">Person</span>
+  <span class="kp">attr_reader</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:age</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+    <span class="vi">@name</span><span class="p">,</span> <span class="vi">@age</span> <span class="o">=</span> <span class="nb">name</span><span class="p">,</span> <span class="n">age</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">&lt;=&gt;</span><span class="p">(</span><span class="n">person</span><span class="p">)</span> <span class="c1"># Comparison operator for sorting</span>
+    <span class="n">age</span> <span class="o">&lt;=&gt;</span> <span class="n">person</span><span class="o">.</span><span class="n">age</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">age</span><span class="si">}</span><span class="s2">)&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># 中文注释</span>
+<span class="n">group</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="no">Person</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="mi">33</span><span class="p">),</span>
+  <span class="no">Person</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Chris&quot;</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span>
+  <span class="no">Person</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;Ash&quot;</span><span class="p">,</span> <span class="mi">23</span><span class="p">)</span>
+<span class="o">]</span>
+
+<span class="nb">puts</span> <span class="n">group</span><span class="o">.</span><span class="n">sort</span><span class="o">.</span><span class="n">reverse</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="java">
+<h3><a class="toc-backref" href="#id36">3.8.2. java代码样例</a><a class="headerlink" href="#java" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>.. code-block:: java
+
+   // Hello.java
+   ...</pre>
+</div>
+<div class="highlight-java"><div class="highlight"><pre><span class="c1">// Hello.java</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.servlet.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hello</span> <span class="kd">extends</span> <span class="n">GenericServlet</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">service</span><span class="o">(</span><span class="kd">final</span> <span class="n">ServletRequest</span> <span class="n">request</span><span class="o">,</span> <span class="kd">final</span> <span class="n">ServletResponse</span> <span class="n">response</span><span class="o">)</span>
+    <span class="kd">throws</span> <span class="n">ServletException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>
+        <span class="n">response</span><span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="s">&quot;text/html&quot;</span><span class="o">);</span>
+        <span class="kd">final</span> <span class="n">PrintWriter</span> <span class="n">pw</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="na">getWriter</span><span class="o">();</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">pw</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+            <span class="n">pw</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>有缩进的都会被认为是代码段，可以用<tt class="docutils literal"><span class="pre">..</span></tt>显式标明代码结束位置:</p>
+<div class="last highlight-python"><pre>.. code-block:: java
+
+   // Hello.java
+   ...
+
+..</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2><a class="toc-backref" href="#id37">3.9. 列表</a><a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id15">
+<h3><a class="toc-backref" href="#id38">3.9.1. 无序列表</a><a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>* 第一项
+
+  第一项说明
+
+  * 子项
+  * 子项
+
+* 第二项
+
+      第二项说明(有缩进)</pre>
+</div>
+<ul>
+<li><p class="first">第一项</p>
+<p>第一项说明</p>
+<ul class="simple">
+<li>子项</li>
+<li>子项</li>
+</ul>
+</li>
+<li><p class="first">第二项</p>
+<blockquote>
+<div><p>第二项说明(有缩进)</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h3><a class="toc-backref" href="#id39">3.9.2. 有序列表</a><a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>#. 第一项
+
+   第一项说明
+
+   #. 子项
+   #. 子项
+
+#. 第二项
+
+       第二项说明(有缩进)</pre>
+</div>
+<ol class="arabic">
+<li><p class="first">第一项</p>
+<p>第一项说明</p>
+<ol class="arabic simple">
+<li>子项</li>
+<li>子项</li>
+</ol>
+</li>
+<li><p class="first">第二项</p>
+<blockquote>
+<div><p>第二项说明(有缩进)</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="id17">
+<h2><a class="toc-backref" href="#id40">3.10. 表格</a><a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id18">
+<h3><a class="toc-backref" href="#id41">3.10.1. 简单表格</a><a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>==== ====
+中文 表格
+==== ====
+测试 测试
+测试 测试
+==== ====</pre>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">中文</th>
+<th class="head">表格</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>测试</td>
+<td>测试</td>
+</tr>
+<tr class="row-odd"><td>测试</td>
+<td>测试</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id19">
+<h3><a class="toc-backref" href="#id42">3.10.2. 网格表格</a><a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>+------------------------+------------+----------+----------+
+| Header row, column 1   | Header 2   | Header 3 | Header 4 |
+| (header rows optional) |            |          |          |
++========================+============+==========+==========+
+| body row 1, column 1   | column 2   | column 3 | column 4 |
++------------------------+------------+----------+----------+
+| body row 2             | Cells may span columns.          |
++------------------------+------------+---------------------+
+| body row 3             | Cells may  | - Table cells       |
++------------------------+ span rows. | - contain           |
+| body row 4             |            | - body elements.    |
++------------------------+------------+---------------------+</pre>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="21%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Header row, column 1
+(header rows optional)</th>
+<th class="head">Header 2</th>
+<th class="head">Header 3</th>
+<th class="head">Header 4</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>body row 1, column 1</td>
+<td>column 2</td>
+<td>column 3</td>
+<td>column 4</td>
+</tr>
+<tr class="row-odd"><td>body row 2</td>
+<td colspan="3">Cells may span columns.</td>
+</tr>
+<tr class="row-even"><td>body row 3</td>
+<td rowspan="2">Cells may
+span rows.</td>
+<td colspan="2" rowspan="2"><ul class="first last simple">
+<li>Table cells</li>
+<li>contain</li>
+<li>body elements.</li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>body row 4</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>Vim 的<a class="reference external" href="https://github.com/vim-scripts/rst-tables--Chao">rst-tables</a>插件可以辅组表格生成和维护。</p>
+<p>默认主题的表格看起来不大对，是因为下面的CSS样式导致的:</p>
+<div class="last highlight-python"><pre>table.docutils td, table.docutils th {
+  border-style: none none solid;
+  border-width: 0 0 1px;
+}</pre>
+</div>
+</div>
+</div>
+<div class="section" id="list-table">
+<h3><a class="toc-backref" href="#id43">3.10.3. 列表表格(List-table)</a><a class="headerlink" href="#list-table" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>.. list-table:: Frozen Delights!
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+   * - Crunchy Frog
+     - 1.49
+     - If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   * - Gannet Ripple
+     - 1.99
+     - On a stick!</pre>
+</div>
+<table border="1" class="docutils">
+<caption>Frozen Delights!</caption>
+<colgroup>
+<col width="27%" />
+<col width="18%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Treat</th>
+<th class="head">Quantity</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Albatross</td>
+<td>2.99</td>
+<td>On a stick!</td>
+</tr>
+<tr class="row-odd"><td>Crunchy Frog</td>
+<td>1.49</td>
+<td>If we took the bones out, it wouldn&#8217;t be
+crunchy, now would it?</td>
+</tr>
+<tr class="row-even"><td>Gannet Ripple</td>
+<td>1.99</td>
+<td>On a stick!</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id20">
+<h3><a class="toc-backref" href="#id44">3.10.4. 外部表格</a><a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><pre>.. csv-table:: 表格描述
+   :header: 中文,表格
+   :file: table.csv</pre>
+</div>
+<p><cite>table.csv</cite>:</p>
+<div class="highlight-python"><pre>"测试,测试",测试
+测试,测试</pre>
+</div>
+<table border="1" class="docutils">
+<caption>表格描述</caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">中文</th>
+<th class="head">表格</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>测试,测试</td>
+<td>测试</td>
+</tr>
+<tr class="row-odd"><td>测试</td>
+<td>测试</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="field-lists">
+<h2><a class="toc-backref" href="#id45">3.11. 字段列表(Field lists)</a><a class="headerlink" href="#field-lists" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python"><pre>:词汇: 解释
+:词汇: 解释</pre>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">词汇:</th><td class="field-body">解释</td>
+</tr>
+<tr class="field-even field"><th class="field-name">词汇:</th><td class="field-body">解释</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sidebar">
+<h2><a class="toc-backref" href="#id46">3.12. 边栏(Sidebar)</a><a class="headerlink" href="#sidebar" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python"><pre>.. sidebar:: 标题
+   :subtitle: 副标题
+
+   边栏内容
+
+正文内容</pre>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">标题</p>
+<p class="sidebar-subtitle">副标题</p>
+<p class="last">边栏内容</p>
+</div>
+<p>正文内容，正文内容，正文内容，正文内容，正文内容，正文内容，正文内容</p>
+<p>正文内容</p>
+<p>正文内容</p>
+<p>正文内容</p>
+</div>
+<div class="section" id="admonitions">
+<h2><a class="toc-backref" href="#id47">3.13. 箴言(Admonitions)</a><a class="headerlink" href="#admonitions" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python"><pre>.. ATTENTION:: ATTENTION
+.. CAUTION:: CAUTION
+.. DANGER:: DANGER
+.. ERROR:: ERROR
+.. HINT:: HINT
+.. IMPORTANT:: IMPORTANT
+.. NOTE:: NOTE
+.. TIP:: TIP
+.. WARNING:: WARNING
+.. admonition:: 自定义箴言
+
+   箴言内容</pre>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">注意</p>
+<p class="last">ATTENTION</p>
+</div>
+<div class="admonition caution">
+<p class="first admonition-title">警告</p>
+<p class="last">CAUTION</p>
+</div>
+<div class="admonition danger">
+<p class="first admonition-title">危险</p>
+<p class="last">DANGER</p>
+</div>
+<div class="admonition error">
+<p class="first admonition-title">错误</p>
+<p class="last">ERROR</p>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">提示</p>
+<p class="last">HINT</p>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">重要</p>
+<p class="last">IMPORTANT</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">NOTE</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">小技巧</p>
+<p class="last">TIP</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">WARNING</p>
+</div>
+<div class="admonition- admonition">
+<p class="first admonition-title">自定义箴言</p>
+<p class="last">箴言内容</p>
+</div>
+</div>
+<div class="section" id="substitution">
+<h2><a class="toc-backref" href="#id48">3.14. 替代(Substitution)</a><a class="headerlink" href="#substitution" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python"><pre>.. |ball| image:: images/ball1.gif
+
+|ball| |ball|</pre>
+</div>
+<p><img alt="ball" src="_images/ball1.gif" /> <img alt="ball" src="_images/ball1.gif" /></p>
+</div>
+<div class="section" id="html">
+<h2><a class="toc-backref" href="#id49">3.15. 内嵌HTML</a><a class="headerlink" href="#html" title="永久链接至标题">¶</a></h2>
+<div class="highlight-python"><pre>.. raw:: html
+
+   &lt;p&gt;段落，&lt;a href="http://example.com"&gt;链接&lt;/a&gt;&lt;/p&gt;</pre>
+</div>
+<p>段落，<a href="http://example.com">链接</a></p></div>
+<div class="section" id="id21">
+<h2><a class="toc-backref" href="#id50">3.16. 自动生成目录</a><a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<p>在<cite>index.rst</cite>里添加类似下面的内容，生成的HTML及PDF会自动生成目录:</p>
+<div class="highlight-python"><pre>.. toctree::
+   :numbered:
+   :maxdepth: 2
+
+   setup
+   usage
+   demo</pre>
+</div>
+<p>章节里用:</p>
+<div class="highlight-python"><pre>.. contents:: 本节内容
+   :local:</pre>
+</div>
+<p>来插入本章节的目录。</p>
+</div>
+<div class="section" id="id22">
+<h2><a class="toc-backref" href="#id51">3.17. 锚点跳转</a><a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<p>标题会自动生成锚点，也可以手工创建:</p>
+<div class="highlight-python"><pre>.. _某章节:
+
+正文
+
+:ref:`引用 &lt;某章节&gt;`
+
+具体查看\ `某章节`_</pre>
+</div>
+<p id="id23">正文</p>
+<p><a class="reference internal" href="#id23"><em>引用</em></a></p>
+<p>具体查看<a class="reference internal" href="#id23">某章节</a></p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>英文标题会生成合理的锚点ID，但中文标题只会生成类似<cite>#id2</cite>这样的锚点。</p>
+<p>如果某一章节需要引用，建议手工创建锚点:</p>
+<div class="last highlight-python"><pre>.. _custom_id:
+
+章节标题
+========</pre>
+</div>
+</div>
+</div>
+<div class="section" id="css">
+<h2><a class="toc-backref" href="#id52">3.18. CSS样式</a><a class="headerlink" href="#css" title="永久链接至标题">¶</a></h2>
+<p>创建<cite>source/_static/default.css</cite>就可以覆盖内置的样式</p>
+<table class="docutils footnote" frame="void" id="id24" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id12">[1]</a></td><td>脚注内容</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">內容目录</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">1. 安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">2. 使用</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">3. 样例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.1. 标题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3.2. 段落</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">3.3. 文字强调</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">3.4. 图片</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">3.5. 链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">3.6. 引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#footnote">3.7. 脚注(Footnote)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">3.8. 代码段</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">3.9. 列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">3.10. 表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#field-lists">3.11. 字段列表(Field lists)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sidebar">3.12. 边栏(Sidebar)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#admonitions">3.13. 箴言(Admonitions)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#substitution">3.14. 替代(Substitution)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#html">3.15. 内嵌HTML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">3.16. 自动生成目录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">3.17. 锚点跳转</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#css">3.18. CSS样式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rest.html">4. reStructuredText 入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">5. A ReStructuredText Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickref.html">6. Quick reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">7. The reStructuredText Cheat Sheet: Syntax Reminders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="restructuredtext.html">8. reStructuredText Markup Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="directives.html">9. reStructuredText Directives</a></li>
+</ul>
+
+  <h3>本页</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/demo.txt"
+           rel="nofollow">显示源代码</a></li>
+  </ul><h3>下载</h3>
+<ul class="this-page-menu">
+  <li>
+    <a href="_download/Sphinx入门_v1.0.pdf"
+         rel="nofollow">PDF</a>
+  </li>
+</ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="rest.html" title="4. reStructuredText 入门"
+             >下一页</a></li>
+        <li class="right" >
+          <a href="usage.html" title="2. 使用"
+             >上一页</a> |</li>
+        <li><a href="index.html">Sphinx入门 v1.0</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; 版权所有 2013, Azuwis.
+    </div>
+  </body>
+</html>

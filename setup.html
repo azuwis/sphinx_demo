@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. 安装 &mdash; Sphinx入门 v1.0</title>
+    
+    <link rel="stylesheet" href="_static/default_mod.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Sphinx入门 v1.0" href="index.html" />
+    <link rel="next" title="2. 使用" href="usage.html" />
+    <link rel="prev" title="Sphinx入门" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="usage.html" title="2. 使用"
+             accesskey="N">下一页</a></li>
+        <li class="right" >
+          <a href="index.html" title="Sphinx入门"
+             accesskey="P">上一页</a> |</li>
+        <li><a href="index.html">Sphinx入门 v1.0</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>1. 安装<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="sphinx">
+<h2>1.1. 安装Sphinx<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h2>
+<div class="section" id="windows">
+<h3>1.1.1. Windows<a class="headerlink" href="#windows" title="永久链接至标题">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">安装Python</p>
+<p>到<a class="reference external" href="http://python.org/getit/">http://python.org/getit/</a>下载安装 Python2 32位版本，当前版本是<a class="reference external" href="http://python.org/ftp/python/2.7.5/python-2.7.5.msi">python 2.7.5</a>。</p>
+</li>
+<li><p class="first">添加Python路径到Path环境变量里</p>
+<p>右键点击<cite>我的电脑</cite>-&gt;<cite>属性</cite>-&gt;<cite>高级</cite>-&gt;<cite>环境变量</cite>，修改<cite>系统环境变量</cite>里的<cite>Path</cite>，假设Python安装路径为<cite>C:\Python2.7.5</cite>，原来的<cite>Path</cite>为<cite>%SystemRoot%\system32</cite>，则改为:</p>
+<div class="highlight-python"><pre>%SystemRoot%\system32;C:\Python2.7.5;C:\Python2.7.5\Scripts</pre>
+</div>
+</li>
+<li><p class="first">安装Easy_install</p>
+<p>下载<a class="reference external" href="http://python-distribute.org/distribute_setup.py">http://python-distribute.org/distribute_setup.py</a>到本地，并双击安装。</p>
+</li>
+<li><p class="first">安装Sphinx及Livereload</p>
+<p>点击<cite>开始</cite>-&gt;<cite>运行</cite>-&gt;<cite>cmd</cite>来打开命令提示符，并运行:</p>
+<div class="highlight-python"><pre>easy_install sphinx livereload</pre>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="linux-debian-ubuntu">
+<h3>1.1.2. Linux(Debian/Ubuntu)<a class="headerlink" href="#linux-debian-ubuntu" title="永久链接至标题">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># apt-get install python-sphinx python-pip</span>
+<span class="c"># pip install livereload</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>1.2. Sphinx版本<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>推荐使用 Sphinx 1.1.3 及以后的版本。</p>
+</div>
+<div class="section" id="livereload">
+<h2>1.3. 安装Livereload浏览器插件<a class="headerlink" href="#livereload" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://github.com/mockko/livereload">Livereload</a>支持以下浏览器：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">浏览器</th>
+<th class="head">插件链接</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Google Chrome</td>
+<td><a class="reference external" href="https://chrome.google.com/extensions/detail/jnihajbhpnppcggbcgedagnkighmdlei">https://chrome.google.com/extensions/detail/jnihajbhpnppcggbcgedagnkighmdlei</a></td>
+</tr>
+<tr class="row-odd"><td>Safari</td>
+<td><a class="reference external" href="https://github.com/downloads/mockko/livereload/LiveReload-1.6.2.safariextz">https://github.com/downloads/mockko/livereload/LiveReload-1.6.2.safariextz</a></td>
+</tr>
+<tr class="row-even"><td>Firefox</td>
+<td><a class="reference external" href="https://addons.mozilla.org/firefox/addon/livereload/">https://addons.mozilla.org/firefox/addon/livereload/</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h2>1.4. 选择合适的编辑器<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id5">
+<h3>1.4.1. Windows<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>选择用对Unix格式换行支持良好、中文显示宽度为英文两倍的编辑器。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">编辑器</th>
+<th class="head">链接</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Sublime text 2</td>
+<td><a class="reference external" href="http://www.sublimetext.com">http://www.sublimetext.com</a></td>
+</tr>
+<tr class="row-odd"><td>Notepad++</td>
+<td><a class="reference external" href="http://notepad-plus-plus.org/">http://notepad-plus-plus.org/</a></td>
+</tr>
+<tr class="row-even"><td>GVim</td>
+<td><a class="reference external" href="http://www.vim.org/download.php">http://www.vim.org/download.php</a></td>
+</tr>
+<tr class="row-odd"><td>Eclipse插件</td>
+<td><a class="reference external" href="http://marketplace.eclipse.org/content/rest-editor">http://marketplace.eclipse.org/content/rest-editor</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="linux">
+<h3>1.4.2. Linux<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h3>
+<p>Vim、Emacs、GEdit等对reStructuredText都有良好的支持。</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">內容目录</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">1. 安装</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx">1.1. 安装Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.2. Sphinx版本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#livereload">1.3. 安装Livereload浏览器插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">1.4. 选择合适的编辑器</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">2. 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">3. 样例</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest.html">4. reStructuredText 入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">5. A ReStructuredText Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickref.html">6. Quick reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">7. The reStructuredText Cheat Sheet: Syntax Reminders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="restructuredtext.html">8. reStructuredText Markup Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="directives.html">9. reStructuredText Directives</a></li>
+</ul>
+
+  <h3>本页</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/setup.txt"
+           rel="nofollow">显示源代码</a></li>
+  </ul><h3>下载</h3>
+<ul class="this-page-menu">
+  <li>
+    <a href="_download/Sphinx入门_v1.0.pdf"
+         rel="nofollow">PDF</a>
+  </li>
+</ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="usage.html" title="2. 使用"
+             >下一页</a></li>
+        <li class="right" >
+          <a href="index.html" title="Sphinx入门"
+             >上一页</a> |</li>
+        <li><a href="index.html">Sphinx入门 v1.0</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; 版权所有 2013, Azuwis.
+    </div>
+  </body>
+</html>

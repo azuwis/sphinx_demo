@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. reStructuredText 入门 &mdash; Sphinx入门 v1.0</title>
+    
+    <link rel="stylesheet" href="_static/default_mod.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Sphinx入门 v1.0" href="index.html" />
+    <link rel="next" title="5. A ReStructuredText Primer" href="quickstart.html" />
+    <link rel="prev" title="3. 样例" href="demo.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="quickstart.html" title="5. A ReStructuredText Primer"
+             accesskey="N">下一页</a></li>
+        <li class="right" >
+          <a href="demo.html" title="3. 样例"
+             accesskey="P">上一页</a> |</li>
+        <li><a href="index.html">Sphinx入门 v1.0</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="restructuredtext">
+<span id="rst-primer"></span><h1>4. reStructuredText 入门<a class="headerlink" href="#restructuredtext" title="永久链接至标题">¶</a></h1>
+<p>本节简要介绍了 新结构化文本 ~ reStructuredText的 (reST)的概念和语法,
+旨在提供足够的信息来帮助作者高效起草文件.
+由于 reST 被设计成一个简单的,不显眼的标记语言,
+所以,这不会花太长时间.</p>
+<div class="admonition- admonition seealso">
+<p class="first admonition-title">也可以参考</p>
+<p class="last">权威 <a class="reference external" href="http://docutils.sourceforge.net/rst.html">新结构化文本用户文档</a>
+在文章的 &#8220;ref&#8221; 链接中,有reST 各种结构的描述可供参考.</p>
+</div>
+<div class="section" id="paragraphs">
+<h2>4.1. 段落 Paragraphs<a class="headerlink" href="#paragraphs" title="永久链接至标题">¶</a></h2>
+<p>段落( <a href="#id2"><span class="problematic" id="id3">:duref:`参考 &lt;paragraphs&gt;`</span></a> )是 reST 文章中最常见的文本块.
+段落是由一个或多个空白分隔的文本块.
+同Python中的约定,在 reST 中使用缩进来标识,
+因此, 所有同级段落,必须左对齐,使用同级缩进.</p>
+</div>
+<div class="section" id="inline-markup">
+<span id="inlinemarkup"></span><h2>4.2. 行内标记 Inline markup<a class="headerlink" href="#inline-markup" title="永久链接至标题">¶</a></h2>
+<p>标准的reST 行内标记很简单:</p>
+<ul class="simple">
+<li>单星号: <tt class="docutils literal"><span class="pre">*文本*</span></tt> 得 <em>强调</em> (斜体 <sup>对中文一般效果不好</sup>) ,</li>
+<li>双星号: <tt class="docutils literal"><span class="pre">**文本**</span></tt> 得 <strong>加重</strong> (加黑),</li>
+<li>反引号: <tt class="docutils literal"><span class="pre">``文本``</span></tt> 得 代码引用.</li>
+</ul>
+<p>If asterisks or backquotes appear in running text and could be confused with
+inline markup delimiters, they have to be escaped with a backslash.</p>
+<p>如果有星号或反引号出现在引用的文本,
+就可能会弄乱内联标记分隔符,这时,可以用反斜杠来转义.</p>
+<p>Be aware of some restrictions of this markup:
+以下是知道这些标记的一些限制:</p>
+<ul class="simple">
+<li>不可叠用</li>
+<li>前后不能用空格: <tt class="docutils literal"><span class="pre">*</span> <span class="pre">text*</span></tt> 这样会出错,</li>
+<li>必须和周围文字用非单词隔离, 一般使用转义空白来完成: <tt class="docutils literal"><span class="pre">thisis\</span> <span class="pre">*one*\</span> <span class="pre">word</span></tt></li>
+</ul>
+<p>These restrictions may be lifted in future versions of the docutils.
+docutils未来版本中,可能取消这些限制.</p>
+<p>reST also allows for custom &#8220;interpreted text roles&#8221;&#8217;, which signify that the
+enclosed text should be interpreted in a specific way.  Sphinx uses this to
+provide semantic markup and cross-referencing of identifiers, as described in
+the appropriate section.  The general syntax is <tt class="docutils literal"><span class="pre">:rolename:`content`</span></tt>.</p>
+<p>reST 也支持自定&#8221;文本诠释规则&#8221;,
+这意味着,任意由指定字符封闭的文本都可以用特定的方式来诠释.
+Sphinx 就用这种形式来提供语义标记和交叉引用,
+一般语法形如: <tt class="docutils literal"><span class="pre">:规则名:`内容`</span></tt></p>
+<p>Standard reST provides the following roles:
+标准 reST 提供以下规则:</p>
+<ul class="simple">
+<li><a href="#id4"><span class="problematic" id="id5">:durole:`emphasis`</span></a> &#8211; <tt class="docutils literal"><span class="pre">*emphasis*</span></tt> 的替代拼写</li>
+<li><a href="#id6"><span class="problematic" id="id7">:durole:`strong`</span></a> &#8211; <tt class="docutils literal"><span class="pre">**strong**</span></tt>  的替代拼写</li>
+<li><a href="#id8"><span class="problematic" id="id9">:durole:`literal`</span></a> &#8211; <tt class="docutils literal"><span class="pre">``literal``</span></tt>  的替代拼写</li>
+<li><a href="#id10"><span class="problematic" id="id11">:durole:`subscript`</span></a> &#8211; 下标</li>
+<li><a href="#id12"><span class="problematic" id="id13">:durole:`superscript`</span></a> &#8211; 上标</li>
+<li><a href="#id14"><span class="problematic" id="id15">:durole:`title-reference`</span></a> &#8211; 书籍/期刊/及其他材料的标题</li>
+</ul>
+<p>参考: <em class="xref std std-ref">inline-markup</em> Sphinx 追加的规则</p>
+</div>
+<div class="section" id="lists-and-quote-like-blocks">
+<h2>4.3. 列表和引用块 Lists and Quote-like blocks<a class="headerlink" href="#lists-and-quote-like-blocks" title="永久链接至标题">¶</a></h2>
+<p>List markup (<a href="#id16"><span class="problematic" id="id17">:duref:`ref &lt;bullet-lists&gt;`</span></a>) is natural: just place an asterisk at
+the start of a paragraph and indent properly.  The same goes for numbered lists;
+they can also be autonumbered using a <tt class="docutils literal"><span class="pre">#</span></tt> sign::
+列表标记(<a href="#id18"><span class="problematic" id="id19">:duref:`参考 &lt;bullet-lists&gt;`</span></a>): 只要自然的在段落的开始放置一个星号并正确缩进.
+这同样适用于带编号的列表;
+也可以使用``#``签署自动编号:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="m">*</span> This is a bulleted list.
+<span class="m">*</span> It has two items, the second
+  item uses two lines.
+
+<span class="m">1.</span> This is a numbered list.
+<span class="m">2.</span> It has two items too.
+
+<span class="m">#.</span> This is a numbered list.
+<span class="m">#.</span> It has two items too.
+</pre></div>
+</div>
+<p>Nested lists are possible, but be aware that they must be separated from the
+parent list items by blank lines:</p>
+<p>嵌套的列表是允许的但必须用空行同父列表分离开:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="m">*</span> this is
+<span class="m">*</span> a list
+
+  <span class="m">*</span> with a nested list
+  <span class="m">*</span> and some subitems
+
+<span class="m">*</span> and here the parent list continues
+</pre></div>
+</div>
+<p>定义列表(<a href="#id20"><span class="problematic" id="id21">:duref:`参考 &lt;definition-lists&gt;`</span></a>) 如下创建:</p>
+<div class="highlight-rest"><div class="highlight"><pre>term (up to a line of text)
+   Definition of the term, which must be indented
+
+   and can even consist of multiple paragraphs
+
+next term
+   Description.
+</pre></div>
+</div>
+<p>Note that the term cannot have more than one line of text.
+注意, 条目本身不能多行.</p>
+<p>Quoted paragraphs (<a href="#id22"><span class="problematic" id="id23">:duref:`ref &lt;block-quotes&gt;`</span></a>) are created by just indenting
+them more than the surrounding paragraphs.
+创建引用段落 (<a href="#id24"><span class="problematic" id="id25">:duref:`参考 &lt;block-quotes&gt;`</span></a>)只需要用缩进和其它段落区分即可.</p>
+<p>线块 (<a href="#id26"><span class="problematic" id="id27">:duref:`ref &lt;line-blocks&gt;`</span></a>) 是保留换行符的一种方法:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="o">|</span> These lines are
+<span class="o">|</span> broken exactly like in
+<span class="o">|</span> the source file.
+</pre></div>
+</div>
+<p>还有其它特殊文本块形式是支持的:</p>
+<ul class="simple">
+<li>字段列表 (field lists <a href="#id28"><span class="problematic" id="id29">:duref:`参考 &lt;field-lists&gt;`</span></a>)</li>
+<li>选项列表 (option lists <a href="#id30"><span class="problematic" id="id31">:duref:`参考 &lt;option-lists&gt;`</span></a>)</li>
+<li>引述文本块 (quoted literal blocks <a href="#id32"><span class="problematic" id="id33">:duref:`参考 &lt;quoted-literal-blocks&gt;`</span></a>)</li>
+<li>文本测试块 (doctest blocks <a href="#id34"><span class="problematic" id="id35">:duref:`参考 &lt;doctest-blocks&gt;`</span></a>)</li>
+</ul>
+</div>
+<div class="section" id="source-code">
+<h2>4.4. 源代码 Source Code<a class="headerlink" href="#source-code" title="永久链接至标题">¶</a></h2>
+<p>代码文本块  (<a href="#id36"><span class="problematic" id="id37">:duref:`参考 &lt;literal-blocks&gt;`</span></a>) 由末尾是特殊标记 <tt class="docutils literal"><span class="pre">::</span></tt> 的段落引发.
+整个代码文本块必须缩进
+(同所有的段落一样,使用空白行和周围文本完成分隔):</p>
+<div class="highlight-rest"><div class="highlight"><pre>This is a normal text paragraph. The next paragraph is a code sample<span class="se">::</span>
+
+<span class="s">   It is not processed in any way, except</span>
+<span class="s">   that the indentation is removed.</span>
+
+<span class="s">   It can span multiple lines.</span>
+
+This is a normal text paragraph again.
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">::</span></tt> 标记是智能处置的:</p>
+<ul class="simple">
+<li>如果作为一个独立段落出现,则和其它文本完全隔离</li>
+<li>如果它紧跟有空格,则将被删除不起作用</li>
+<li>如果它在非空白字符之前,则替换为普通的单一冒号</li>
+</ul>
+<p>综上,前述示例中的第二段代码引用文本之前的一句会渲染为 &#8220;The next paragraph is a code sample:&#8221;</p>
+<p>That way, the second sentence in the above example&#8217;s first paragraph would be
+rendered as &#8220;The next paragraph is a code sample:&#8221;.</p>
+</div>
+<div class="section" id="tables">
+<span id="rst-tables"></span><h2>4.5. 表格 Tables<a class="headerlink" href="#tables" title="永久链接至标题">¶</a></h2>
+<p>支持两种表格.</p>
+<p><strong>网格表</strong> (<a href="#id38"><span class="problematic" id="id39">:duref:`参考 &lt;grid-tables&gt;`</span></a>),
+你不得不自行&#8221;绘制&#8221;表格的边框.看起来象这样:</p>
+<div class="highlight-rest"><div class="highlight"><pre>+------------------------+------------+----------+----------+
+<span class="o">|</span> Header row, column 1   | Header 2   | Header 3 | Header 4 |
+<span class="o">|</span> (header rows optional) |            |          |          |
++========================+============+==========+==========+
+<span class="o">|</span> body row 1, column 1   | column 2   | column 3 | column 4 |
++------------------------+------------+----------+----------+
+<span class="o">|</span> body row 2             | ...        | ...      |          |
++------------------------+------------+----------+----------+
+</pre></div>
+</div>
+<p><strong>简单表</strong> (<a href="#id40"><span class="problematic" id="id41">:duref:`参考 &lt;simple-tables&gt;`</span></a>) 容易点,</p>
+<p>但是有限制:至少要有一列,而且,第一行不能包含多行文本,
+看起来象这样:</p>
+<div class="highlight-rest"><div class="highlight"><pre>=====  =====  =======
+A      B      A and B
+=====  =====  =======
+False  False  False
+True   False  False
+False  True   False
+True   True   True
+=====  =====  =======
+</pre></div>
+</div>
+</div>
+<div class="section" id="hyperlinks">
+<h2>4.6. 超链接 Hyperlinks<a class="headerlink" href="#hyperlinks" title="永久链接至标题">¶</a></h2>
+<div class="section" id="external-links">
+<h3>4.6.1. 外部链接 External links<a class="headerlink" href="#external-links" title="永久链接至标题">¶</a></h3>
+<p>Use <tt class="docutils literal"><span class="pre">`Link</span> <span class="pre">text</span> <span class="pre">&lt;http://example.com/&gt;`_</span></tt> for inline web links.  If the link
+text should be the web address, you don&#8217;t need special markup at all, the parser
+finds links and mail addresses in ordinary text.</p>
+<p>用 <tt class="docutils literal"><span class="pre">`Link</span> <span class="pre">text</span> <span class="pre">&lt;http://example.com/&gt;`_</span></tt> 来记录行内链接.
+如果文字本身就是链接,
+那不用作任何标记,解析器可以自动将链接和邮箱地址转换为超链接.</p>
+<p>也可以单独定义链接目标用引用(<a href="#id42"><span class="problematic" id="id43">:duref:`参考 &lt;hyperlink-targets&gt;`</span></a>),比如:</p>
+<div class="highlight-rest"><div class="highlight"><pre>This is a paragraph that contains <span class="s">`a link`_</span>.
+
+<span class="p">..</span> <span class="nt">_a link:</span> http://example.com/
+</pre></div>
+</div>
+</div>
+<div class="section" id="internal-links">
+<h3>4.6.2. 内部链接 Internal links<a class="headerlink" href="#internal-links" title="永久链接至标题">¶</a></h3>
+<p>Internal linking is done via a special reST role provided by Sphinx, see the
+section on specific markup, <em class="xref std std-ref">ref-role</em>.</p>
+<p>Sphinx 使用特殊 reST 规则支持内部链接,
+详细参考 <em class="xref std std-ref">定义规则</em></p>
+</div>
+</div>
+<div class="section" id="sections">
+<h2>4.7. 章节 Sections<a class="headerlink" href="#sections" title="永久链接至标题">¶</a></h2>
+<p>Section headers (<a href="#id44"><span class="problematic" id="id45">:duref:`ref &lt;sections&gt;`</span></a>) are created by underlining (and
+optionally overlining) the section title with a punctuation character, at least
+as long as the text:</p>
+<p>章节头部 (<a href="#id46"><span class="problematic" id="id47">:duref:`参考 &lt;sections&gt;`</span></a>)
+由下线(也可有上线)和包含标点的标题 组合创建,
+其中下线要至少等于标准文本的长度:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="gh">=================</span>
+<span class="gh">This is a heading</span>
+<span class="gh">=================</span>
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">注意</p>
+<p class="sidebar-subtitle">中文标题的问题</p>
+<p class="last">在多数编辑器中,全角/半角中文/标点和E文字符的长度是完全没谱的,
+所以,多数情况下,为保持一致性,译者建议统一使用固定长度的上下标线;
+比如说78.</p>
+</div>
+<p>Normally, there are no heading levels assigned to certain characters as the
+structure is determined from the succession of headings.  However, for the
+Python documentation, this convention is used which you may follow:
+通常并没有对标题的层级指定明确的标线字符.
+不过,对于 Pyhton 文档,可以使用如下约定:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">#</span></tt> 有上标线, 用以部分</li>
+<li><tt class="docutils literal"><span class="pre">*</span></tt> 有上标线, 用以章节</li>
+<li><tt class="docutils literal"><span class="pre">=</span></tt>, 用以小节</li>
+<li><tt class="docutils literal"><span class="pre">-</span></tt>, 用以子节</li>
+<li><tt class="docutils literal"><span class="pre">^</span></tt>, 用以子节的子节</li>
+<li><tt class="docutils literal"><span class="pre">&quot;</span></tt>, 用以段落</li>
+</ul>
+<p>Of course, you are free to use your own marker characters (see the reST
+documentation), and use a deeper nesting level, but keep in mind that most
+target formats (HTML, LaTeX) have a limited supported nesting depth.</p>
+<p>当然,你可以自由的使用你自定的标识字符(参考 reST 文档),
+并使用更加深的嵌套层次,
+不过,考虑到兼容多种输出格式(HTML, LaTeX) 最好限制嵌套的深度.</p>
+<div class="sidebar">
+<p class="first sidebar-title">提示</p>
+<p class="sidebar-subtitle">标题层次体验</p>
+<p class="last">从行文来说,结构化文本组织的文章,更加关注局部文本的结构清晰,
+以整个图书来说,不建议设定太多的标题级别,一般而言**四级**足够了.</p>
+</div>
+</div>
+<div class="section" id="explicit-markup">
+<h2>4.8. 直解标记 Explicit Markup<a class="headerlink" href="#explicit-markup" title="永久链接至标题">¶</a></h2>
+<p>&#8220;Explicit markup&#8221; (<a href="#id48"><span class="problematic" id="id49">:duref:`ref &lt;explicit-markup-blocks&gt;`</span></a>) is used in reST for
+most constructs that need special handling, such as footnotes,
+specially-highlighted paragraphs, comments, and generic directives.</p>
+<p>&#8220;直解标记&#8221; (Explicit markup, <a href="#id50"><span class="problematic" id="id51">:duref:`参考 &lt;explicit-markup-blocks&gt;`</span></a>)
+用以 reST 中需要特殊处理的各种内容,
+如脚注,特殊高亮段落,注释,以及通用指令.</p>
+<p>An explicit markup block begins with a line starting with <tt class="docutils literal"><span class="pre">..</span></tt> followed by
+whitespace and is terminated by the next paragraph at the same level of
+indentation.  (There needs to be a blank line between explicit markup and normal
+paragraphs.  This may all sound a bit complicated, but it is intuitive enough
+when you write it.)</p>
+<p>直解标记块由``..``开始,紧后跟空格以及跟随的同缩进的文本块.
+(和正文间要有空白行来明确的加以区分.
+可能听起来有点复杂,但当你书写时就能直观的体验到)</p>
+</div>
+<div class="section" id="directives">
+<span id="id52"></span><h2>4.9. 指令 Directives<a class="headerlink" href="#directives" title="永久链接至标题">¶</a></h2>
+<p>A directive (<a href="#id53"><span class="problematic" id="id54">:duref:`ref &lt;directives&gt;`</span></a>) is a generic block of explicit markup.
+指令(<a href="#id55"><span class="problematic" id="id56">:duref:`ref &lt;directives&gt;`</span></a>)就是一个标准的明确标记(Explicit Markup)块.
+Besides roles, it is one of the extension mechanisms of reST, and Sphinx makes
+heavy use of it.
+除了规则,它是reST 的又一个扩展机制,
+Sphinx 大量使用了指令.</p>
+<p>Docutils 支持以下指令:</p>
+<ul>
+<li><p class="first">警示 Admonitions: <a href="#id57"><span class="problematic" id="id58">:dudir:`attention`</span></a>, <a href="#id59"><span class="problematic" id="id60">:dudir:`caution`</span></a>, <a href="#id61"><span class="problematic" id="id62">:dudir:`danger`</span></a>,
+<a href="#id63"><span class="problematic" id="id64">:dudir:`error`</span></a>, <a href="#id65"><span class="problematic" id="id66">:dudir:`hint`</span></a>, <a href="#id67"><span class="problematic" id="id68">:dudir:`important`</span></a>, <a href="#id69"><span class="problematic" id="id70">:dudir:`note`</span></a>,
+<a href="#id71"><span class="problematic" id="id72">:dudir:`tip`</span></a>, <a href="#id73"><span class="problematic" id="id74">:dudir:`warning`</span></a> and the generic <a href="#id75"><span class="problematic" id="id76">:dudir:`admonition`</span></a>.
+(多数样式目前仅支持 &#8220;note&#8221; 和 &#8220;warning&#8221; <sup>好在都有针对的对象ID,很容易使用CSS进行定制</sup> .)</p>
+</li>
+<li><p class="first">图像 Images:</p>
+<ul class="simple">
+<li><a href="#id77"><span class="problematic" id="id78">:dudir:`image`</span></a> (参考后面的 <a href="#id154"><span class="problematic" id="id155">Images_</span></a> )</li>
+<li><a href="#id79"><span class="problematic" id="id80">:dudir:`figure`</span></a> (配有标题和图例 的图片)</li>
+</ul>
+</li>
+<li><p class="first">其它行文元素 Additional body elements:</p>
+<ul class="simple">
+<li><a href="#id81"><span class="problematic" id="id82">:dudir:`contents`</span></a> (对诸如 本地文件 的内容表单)</li>
+<li><a href="#id83"><span class="problematic" id="id84">:dudir:`container`</span></a> (配有定制 class 的容器,以便生成HTML 中的 <tt class="docutils literal"><span class="pre">&lt;div&gt;</span></tt> )</li>
+<li><a href="#id85"><span class="problematic" id="id86">:dudir:`rubric`</span></a> (没有到相对段落关系的标题 a heading without relation to the document sectioning)</li>
+<li><a href="#id87"><span class="problematic" id="id88">:dudir:`topic`</span></a>, <a href="#id89"><span class="problematic" id="id90">:dudir:`sidebar`</span></a> (特殊高亮的正文元素 special highlighted body elements)</li>
+<li><a href="#id91"><span class="problematic" id="id92">:dudir:`parsed-literal`</span></a> (支持内嵌标记的文本块)</li>
+<li><a href="#id93"><span class="problematic" id="id94">:dudir:`epigraph`</span></a> (有可选归属行的引用文本块)</li>
+<li><a href="#id95"><span class="problematic" id="id96">:dudir:`highlights`</span></a>, <a href="#id97"><span class="problematic" id="id98">:dudir:`pull-quote`</span></a> (有他们自己class属性的文本块)</li>
+<li><a href="#id99"><span class="problematic" id="id100">:dudir:`compound`</span></a> (复合段落)</li>
+</ul>
+</li>
+<li><p class="first">特殊表格 Special tables:</p>
+<ul class="simple">
+<li><a href="#id101"><span class="problematic" id="id102">:dudir:`table`</span></a> (有标题的表格)</li>
+<li><a href="#id103"><span class="problematic" id="id104">:dudir:`csv-table`</span></a> (从csv数据生成的表格)</li>
+<li><a href="#id105"><span class="problematic" id="id106">:dudir:`list-table`</span></a> (从列表数据生成的表格)</li>
+</ul>
+</li>
+<li><p class="first">特殊指令 Special directives:</p>
+<ul class="simple">
+<li><a href="#id107"><span class="problematic" id="id108">:dudir:`raw`</span></a> (包括原始文本的目标格式标记 include raw target-format markup)</li>
+<li><a href="#id109"><span class="problematic" id="id110">:dudir:`include`</span></a> (从其它文件引入 reST )
+&#8211; 在Sphinx, 当给定包含文件的绝对路径时,指令会从源代码目录为起点进行相对路径查找.</li>
+<li><a href="#id111"><span class="problematic" id="id112">:dudir:`class`</span></a> (将 class 属性绑定到下一个元素) <a class="footnote-reference" href="#id153" id="id113">[1]</a></li>
+</ul>
+</li>
+<li><p class="first">HTML 专用 specifics:</p>
+<ul class="simple">
+<li><a href="#id114"><span class="problematic" id="id115">:dudir:`meta`</span></a> (生成 HTML 中的 <tt class="docutils literal"><span class="pre">&lt;meta&gt;</span></tt> 标签)</li>
+<li><a href="#id116"><span class="problematic" id="id117">:dudir:`title`</span></a> (覆盖文件标题)</li>
+</ul>
+</li>
+<li><p class="first">影响标记 Influencing markup:</p>
+<ul class="simple">
+<li><a href="#id118"><span class="problematic" id="id119">:dudir:`default-role`</span></a> (设置新默认规则)</li>
+<li><a href="#id120"><span class="problematic" id="id121">:dudir:`role`</span></a> (创建新规则)</li>
+</ul>
+<p>由于这些指令都只能作用到单一文件,所以,更好的使用 Sphinx 的方式是设置 <a href="#id122"><span class="problematic" id="id123">:confval:`default_role`</span></a>.</p>
+</li>
+</ul>
+<p><em>不要</em> 使用指令 <a href="#id124"><span class="problematic" id="id125">:dudir:`sectnum`</span></a>, <a href="#id126"><span class="problematic" id="id127">:dudir:`header`</span></a> 和 <a href="#id128"><span class="problematic" id="id129">:dudir:`footer`</span></a>.</p>
+<p>Sphinx 增加的指令描述收集在:  <em class="xref std std-ref">sphinxmarkup</em> .</p>
+<p>Basically, a directive consists of a name, arguments, options and content. (Keep
+this terminology in mind, it is used in the next chapter describing custom
+directives.)  Looking at this example,
+基本上一个指令由名称,参数,选项和内容组成.
+(请记住这里提及的几个术语,
+它们将在之后章节描述自定义指令)
+从这个例子来看,:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="p">..</span> <span class="ow">function</span><span class="p">::</span> foo(x)
+              foo(y, z)
+   <span class="nc">:module:</span> <span class="nf">some.module.name</span>
+
+   Return a line of text input from the user.
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">function</span></tt> 是指令名,
+在头两行里给出了两个参数,
+紧接着给出了一个 <tt class="docutils literal"><span class="pre">module</span></tt> 选项
+(正如你所见,由冒号标明的 <tt class="docutils literal"><span class="pre">module</span></tt> 之后立即跟上参数)
+选项​​必须缩进和指令内容有相同的缩进.</p>
+<p>该指令的内容则是由一个空行和同样的缩进来接上.</p>
+</div>
+<div class="section" id="images">
+<h2>4.10. 图片 Images<a class="headerlink" href="#images" title="永久链接至标题">¶</a></h2>
+<p>reST 支持图片指令 (<a href="#id130"><span class="problematic" id="id131">:dudir:`ref &lt;image&gt;`</span></a>), 这样使用:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> gnu.png
+   (options)
+</pre></div>
+</div>
+<p>在Sphinx 中使用时,
+给入的文件名 (此处是 <tt class="docutils literal"><span class="pre">gnu.png</span></tt>) 必须是相对源文件目录的路径,
+如果给的是绝对路径形式,也意味着对源文件顶层目录进行相对查找.
+比如说, 文件 <tt class="docutils literal"><span class="pre">sketch/spam.rst</span></tt> 可以用路径 <tt class="docutils literal"><span class="pre">../images/spam.png</span></tt> 或 <tt class="docutils literal"><span class="pre">/images/spam.png</span></tt>.
+来引用图片 <tt class="docutils literal"><span class="pre">images/spam.png</span></tt></p>
+<p>Sphinx will automatically copy image files over to a subdirectory of the output
+directory on building (e.g. the <tt class="docutils literal"><span class="pre">_static</span></tt> directory for HTML output.)
+Sphinx 会自动将图片复制到构筑输出目录中的相关子目录
+(e.g. HTML输出时的 <tt class="docutils literal"><span class="pre">_static</span></tt> 目录.)</p>
+<p>Interpretation of image size options (<tt class="docutils literal"><span class="pre">width</span></tt> and <tt class="docutils literal"><span class="pre">height</span></tt>) is as follows:
+if the size has no unit or the unit is pixels, the given size will only be
+respected for output channels that support pixels (i.e. not in LaTeX output).
+Other units (like <tt class="docutils literal"><span class="pre">pt</span></tt> for points) will be used for HTML and LaTeX output.</p>
+<p>图片尺寸的解释选项 (<tt class="docutils literal"><span class="pre">width</span></tt> 和 <tt class="docutils literal"><span class="pre">height</span></tt>)有如下规约:
+如果大小没给任何单位或单位是像素,
+输出通道优先使用像素(换言之,非LaTeX输出).
+其他单位(如 <tt class="docutils literal"><span class="pre">pt</span></tt> 或是 点) 将被用于HTML和LaTeX输出.</p>
+<p>Sphinx extends the standard docutils behavior by allowing an asterisk for the
+extension
+Sphinx 扩展了标准 docutils 行为,支持如下的星号指代:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> gnu.*
+</pre></div>
+</div>
+<p>Sphinx then searches for all images matching the provided pattern and determines
+their type.  Each builder then chooses the best image out of these candidates.
+For instance, if the file name <tt class="docutils literal"><span class="pre">gnu.*</span></tt> was given and two files <tt class="file docutils literal"><span class="pre">gnu.pdf</span></tt>
+and <tt class="file docutils literal"><span class="pre">gnu.png</span></tt> existed in the source tree, the LaTeX builder would choose
+the former, while the HTML builder would prefer the latter.
+Sphinx 会搜索所有匹配所提供模式的图片,
+并确定它们的类型.
+每个构筑器再从中选择最佳的图片.
+例如,
+如果给定文件名是 <tt class="docutils literal"><span class="pre">gnu.*</span></tt> ,
+源代码树中有两个文件 <tt class="file docutils literal"><span class="pre">gnu.pdf</span></tt> 和 <tt class="file docutils literal"><span class="pre">gnu.png</span></tt> ,
+LaTeX 构筑器会选择前者,
+HTML 构筑器更倾向于后者.</p>
+<p class="versionchanged">
+<span class="versionmodified">在 0.4 版更改: </span>增加了文件名的星号后缀支持.</p>
+<p class="versionchanged">
+<span class="versionmodified">在 0.6 版更改: </span>开始支持绝对路径的图片</p>
+</div>
+<div class="section" id="footnotes">
+<h2>4.11. 脚注  Footnotes<a class="headerlink" href="#footnotes" title="永久链接至标题">¶</a></h2>
+<p>and add the footnote body at the bottom of the document after a
+&#8220;Footnotes&#8221; rubric heading, like so::
+脚注 (<a href="#id132"><span class="problematic" id="id133">:duref:`参考 &lt;footnotes&gt;`</span></a>), 使用 <tt class="docutils literal"><span class="pre">[#name]_</span></tt> 来标记位置,
+并在文章底部 &#8220;Footnotes&#8221; 专栏之后追加脚注内容,如下使用:</p>
+<div class="highlight-rest"><div class="highlight"><pre>Lorem ipsum <span class="s">[#f1]_</span> dolor sit amet ... <span class="s">[#f2]_</span>
+
+<span class="p">..</span> <span class="ow">rubric</span><span class="p">::</span> Footnotes
+
+<span class="p">..</span> <span class="nt">[#f1]</span> Text of the first footnote.
+<span class="p">..</span> <span class="nt">[#f2]</span> Text of the second footnote.
+</pre></div>
+</div>
+<p>You can also explicitly number the footnotes (<tt class="docutils literal"><span class="pre">[1]_</span></tt>) or use auto-numbered
+footnotes without names (<tt class="docutils literal"><span class="pre">[#]_</span></tt>).
+可以使用确切编号的脚注 (如: <tt class="docutils literal"><span class="pre">[1]_</span></tt>)
+或是自动编号(用 <tt class="docutils literal"><span class="pre">[#]_</span></tt>).</p>
+</div>
+<div class="section" id="citations">
+<h2>4.12. 引证 Citations<a class="headerlink" href="#citations" title="永久链接至标题">¶</a></h2>
+<p>标准 reST 支持引证 (<a href="#id134"><span class="problematic" id="id135">:duref:`参考 &lt;citations&gt;`</span></a>) ,
+with the
+additional feature that they are &#8220;global&#8221;, i.e. all citations can be referenced
+from all files.  Use them like so::
+有额外的功能是 &#8220;global&#8221;,
+换言之,引证能从所有文件来引用.
+这样使用:</p>
+<div class="highlight-rest"><div class="highlight"><pre>Lorem ipsum <span class="s">[Ref]_</span> dolor sit amet.
+
+<span class="p">..</span> <span class="nt">[Ref]</span> Book or article reference, URL or whatever.
+</pre></div>
+</div>
+<p>Citation usage is similar to footnote usage, but with a label that is not
+numeric or begins with <tt class="docutils literal"><span class="pre">#</span></tt>.
+引证 的使用基本和脚注相同,
+不过使用的标签不是数字或是以 <tt class="docutils literal"><span class="pre">#</span></tt> 开始.</p>
+</div>
+<div class="section" id="substitutions">
+<h2>4.13. 替换 Substitutions<a class="headerlink" href="#substitutions" title="永久链接至标题">¶</a></h2>
+<p>reST 支持 &#8220;替换&#8221; (<a href="#id136"><span class="problematic" id="id137">:duref:`参考 &lt;substitution-definitions&gt;`</span></a>),
+以 <tt class="docutils literal"><span class="pre">|name|</span></tt> 形式来定义替换的文本或是标记对象.
+如脚注,可以在直解标记文本块中声明,形如:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="p">..</span> <span class="nt">|name|</span> <span class="ow">replace</span><span class="p">::</span> replacement <span class="ge">*text*</span>
+</pre></div>
+</div>
+<p>或是:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="p">..</span> <span class="nt">|caution|</span> <span class="ow">image</span><span class="p">::</span> warning.png
+             <span class="nc">:alt:</span> <span class="nf">Warning!</span>
+</pre></div>
+</div>
+<p>详参 <a href="#id138"><span class="problematic" id="id139">:duref:`reST 替换参考 &lt;substitution-definitions&gt;`</span></a> .</p>
+<p>If you want to use some substitutions for all documents, put them into
+<a href="#id140"><span class="problematic" id="id141">:confval:`rst_prolog`</span></a> or put them into a separate file and include it into all
+documents you want to use them in, using the <tt class="xref rst rst-dir docutils literal"><span class="pre">include</span></tt> directive.  (Be
+sure to give the include file a file name extension differing from that of other
+source files, to avoid Sphinx finding it as a standalone document.)</p>
+<p>如果你对所有文件使用一组替换,
+把它们置入 <a href="#id142"><span class="problematic" id="id143">:confval:`rst_prolog`</span></a> 或放入一个单独的文件,
+并在所有相关文件中使用 <tt class="xref rst rst-dir docutils literal"><span class="pre">incluse</span></tt> 指令引入,
+(请将此定义文件,使用和内容文件不同的后缀,否则,Sphinx 将视其为独立文章来尝试解析)</p>
+<p>Sphinx defines some default substitutions, see <em class="xref std std-ref">default-substitutions</em>.
+Sphinx 本身有些默认替换,参考 <em class="xref std std-ref">default-substitutions</em> .</p>
+</div>
+<div class="section" id="comments">
+<h2>4.14. 注释  Comments<a class="headerlink" href="#comments" title="永久链接至标题">¶</a></h2>
+<p>所有直解标记文本块都不算有效的标记构成
+Every explicit markup block which isn&#8217;t a valid markup construct (like the
+footnotes above) is regarded as a comment (<a href="#id144"><span class="problematic" id="id145">:duref:`ref &lt;comments&gt;`</span></a>).  For
+example:</p>
+<p>没有有效标记(如脚注)的直解标记文本块就是注释(<a href="#id146"><span class="problematic" id="id147">:duref:`参考 &lt;comments&gt;`</span></a>)
+例如:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="cp">.. This is a comment.</span>
+</pre></div>
+</div>
+<p>可以用缩进文本来进行多行注释:</p>
+<div class="highlight-rest"><div class="highlight"><pre><span class="cp">..</span>
+<span class="cp">   This whole indented block</span>
+<span class="cp">   is a comment.</span>
+
+<span class="cp">   Still in the comment.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="source-encoding">
+<h2>4.15. 源文本编码 Source encoding<a class="headerlink" href="#source-encoding" title="永久链接至标题">¶</a></h2>
+<p>Since the easiest way to include special characters like em dashes or copyright
+signs in reST is to directly write them as Unicode characters, one has to
+specify an encoding.  Sphinx assumes source files to be encoded in UTF-8 by
+default; you can change this with the <a href="#id148"><span class="problematic" id="id149">:confval:`source_encoding`</span></a> config value.</p>
+<p>由于最简单的方式,是在 reST 中将包括特殊字符(如长划线或版权标记)都直接写成Unicode字符.
+Sphinx 默认假设源文件是 utf-8 编码.
+你可以用配置项 <a href="#id150"><span class="problematic" id="id151">:confval:`source_encoding`</span></a> 来指定别的编码.</p>
+</div>
+<div class="section" id="gotchas">
+<h2>4.16. 嗯嗯嗯 Gotchas<a class="headerlink" href="#gotchas" title="永久链接至标题">¶</a></h2>
+<p>There are some problems one commonly runs into while authoring reST documents:
+通常运用 reST 进行撰写时会遇见几个问题:</p>
+<ul class="simple">
+<li><strong>对在线标记的分隔:</strong> 如前所述,内联标记必须用非单词字符和周围的文字进行区隔,
+要解决这个问题你必须使用反斜杠转义空格,详见 <a class="reference external" href="http://docutils.sf.net/docs/ref/rst/restructuredtext.html#inline-markup">参考</a> .</li>
+<li><strong>在线标记不能嵌套:</strong> 但是形如 <tt class="docutils literal"><span class="pre">*see</span> <span class="pre">:func:`foo`*</span></tt> 是没问题的.</li>
+</ul>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="id153" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id113">[1]</a></td><td>当默认域包含 <tt class="xref rst rst-dir docutils literal"><span class="pre">class</span></tt> 指令时,该指令将被掩蔽,
+因此 Sphinx 转而使用 <tt class="xref rst rst-dir docutils literal"><span class="pre">rst-class</span></tt>.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">內容目录</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">1. 安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">2. 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html">3. 样例</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">4. reStructuredText 入门</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#paragraphs">4.1. 段落 Paragraphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inline-markup">4.2. 行内标记 Inline markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lists-and-quote-like-blocks">4.3. 列表和引用块 Lists and Quote-like blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-code">4.4. 源代码 Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tables">4.5. 表格 Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hyperlinks">4.6. 超链接 Hyperlinks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sections">4.7. 章节 Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#explicit-markup">4.8. 直解标记 Explicit Markup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directives">4.9. 指令 Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images">4.10. 图片 Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#footnotes">4.11. 脚注  Footnotes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#citations">4.12. 引证 Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#substitutions">4.13. 替换 Substitutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comments">4.14. 注释  Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-encoding">4.15. 源文本编码 Source encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gotchas">4.16. 嗯嗯嗯 Gotchas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">5. A ReStructuredText Primer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickref.html">6. Quick reStructuredText</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cheatsheet.html">7. The reStructuredText Cheat Sheet: Syntax Reminders</a></li>
+<li class="toctree-l1"><a class="reference internal" href="restructuredtext.html">8. reStructuredText Markup Specification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="directives.html">9. reStructuredText Directives</a></li>
+</ul>
+
+  <h3>本页</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/rest.txt"
+           rel="nofollow">显示源代码</a></li>
+  </ul><h3>下载</h3>
+<ul class="this-page-menu">
+  <li>
+    <a href="_download/Sphinx入门_v1.0.pdf"
+         rel="nofollow">PDF</a>
+  </li>
+</ul>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="quickstart.html" title="5. A ReStructuredText Primer"
+             >下一页</a></li>
+        <li class="right" >
+          <a href="demo.html" title="3. 样例"
+             >上一页</a> |</li>
+        <li><a href="index.html">Sphinx入门 v1.0</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; 版权所有 2013, Azuwis.
+    </div>
+  </body>
+</html>

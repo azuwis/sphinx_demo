@@ -1,0 +1,9 @@
+@import url("default.css");
+
+/* p { text-indent: 2em; } */
+
+table.docutils td, table.docutils th {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(170, 170, 170);
+}
