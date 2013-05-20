@@ -100,7 +100,6 @@ latex:
 	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	@echo
 	@echo "Replacing pdflatex with xelatex in $(BUILDDIR)/latex/Makefile"
-	@sed -i -e 's/pdflatex/xelatex/' $(BUILDDIR)/latex/Makefile
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
 	      "(use \`make latexpdf' here to do that automatically)."
