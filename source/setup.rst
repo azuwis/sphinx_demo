@@ -13,7 +13,7 @@ Windows
 
 #. 添加Python路径到Path环境变量里
 
-   右键点击“我的电脑”->“属性”->高级”->“环境变量“，修改“系统环境变量”里的“Path“，假设Python安装路径为\ `C:\Python2.7.5`\ ，原来的“Path”为\ `%SystemRoot%\system32`\ ，则改为::
+   右键点击“我的电脑”->“属性”->高级”->“环境变量“，修改“系统环境变量”里的“Path“，假设Python安装路径为\ `C:\\Python2.7.5`\ ，原来的“Path”为\ `%SystemRoot%\system32`\ ，则改为::
 
      %SystemRoot%\system32;C:\Python2.7.5;C:\Python2.7.5\Scripts
 
