@@ -65,7 +65,11 @@ Windows下双击\ `make-livehtml.bat`\ ，Linux下运行::
     $ cd sphinx_demo
     $ make livehtml
 
-Livereload会自动调用浏览器打开生成的HTML文档，使用任意编辑器编辑\ `.rst`\ 文件，保存时，Livereload会自动更新HTML文档，并刷新浏览器。
+Livereload会自动调用浏览器打开生成的HTML文档，使用任意编辑器编辑\ `.rst`\ 文件，保存时，Livereload会自动更新HTML文档，并刷新浏览器，保留页面位置。
+
+Livereload只负责更新HTML和刷新浏览器，并不能自动打开对应页面，编辑前需要先手工定位浏览器到对应的页面位置。
+
+另外注意，浏览器URL里有锚点的话，刷新页面时一定会跳到这一锚点上。
 
 .. NOTE::
    Livereload默认使用8000端口，如果已经占用，编辑\ `Makefile`\ 和\ `make.bat`\ 更改。
