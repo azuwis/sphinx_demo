@@ -191,3 +191,4 @@ gh-pages: clean html
 push-github: gh-pages
 	git commit --amend -m 'gh-pages'
 	git push --force origin gh-pages
+	git checkout master
