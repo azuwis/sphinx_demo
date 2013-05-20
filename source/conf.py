@@ -40,9 +40,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'测试文档'
-copyright = u'2013, 作者'
-author = u'作者'
+project = u'Sphinx入门'
+copyright = u'2013, Azuwis'
+author = u'Azuwis'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
