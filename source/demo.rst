@@ -464,6 +464,19 @@ java代码样例
 
     箴言内容
 
+内嵌HTML
+--------
+
+::
+
+    .. raw:: html
+
+        <p>段落，<a href="http://example.com">链接</a></p>
+
+.. raw:: html
+
+    <p>段落，<a href="http://example.com">链接</a></p>
+
 自动生成目录
 ------------
 
