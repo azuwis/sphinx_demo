@@ -74,3 +74,9 @@ Livereload会自动调用浏览器打开生成的HTML文档，使用任意编辑
 --------
 
 编辑\ `.rst`\ 时注意使用空格，避免用制表符，勿用中文空格。
+
+常用链接
+--------
+
+* Sphinx主页 http://sphinx-doc.org/
+* Sphinx中文翻译 http://sphinx-doc-zh.readthedocs.org/
