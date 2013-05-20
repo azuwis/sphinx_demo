@@ -180,3 +180,14 @@ publish: html chm latexpdf
 	@cp $(BUILDDIR)/latex/*.pdf $(BUILDDIR)/html/_download
 	@echo
 	@echo "Publish finished."
+
+gh-pages: clean html
+	git checkout gh-pages || checkout --orphan gh-pages
+	touch .nojekyll
+	cp -r build/html/* .
+	rm -r build
+	git add .
+
+push-github: gh-pages
+	git commit --amend -m 'gh-pages'
+	git push --force origin gh-pages
