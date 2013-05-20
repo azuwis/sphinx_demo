@@ -464,6 +464,19 @@ java代码样例
 
     箴言内容
 
+替代(Substitution)
+------------------
+
+::
+
+    .. |ball| image:: images/ball1.gif
+
+    |ball| |ball|
+
+.. |ball| image:: images/ball1.gif
+
+|ball| |ball|
+
 内嵌HTML
 --------
 
