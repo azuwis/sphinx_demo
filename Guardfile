@@ -7,7 +7,11 @@ import functools
 def build_sphinx():
     """ Any time a file is modified, call ``make html`` """
     import subprocess
-    subprocess.call(['make', 'html'])
+    import sys
+    if sys.platform == 'win32':
+        subprocess.call(['make.bat', 'html'])
+    else:
+        subprocess.call(['make', 'html'])
 
 # You may have a different path, e.g. _source/
 Task.add('source/', build_sphinx)

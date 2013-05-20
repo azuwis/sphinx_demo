@@ -187,4 +187,11 @@ results in %BUILDDIR%/doctest/output.txt.
 	goto end
 )
 
+if "%1" == "livehtml" (
+	%SPHINXBUILD% -b html %ALLSPHINXOPTS% %BUILDDIR%/html
+	livereload -p 8000 -b %BUILDDIR%/html
+	if errorlevel 1 exit /b 1
+	goto end
+)
+
 :end
