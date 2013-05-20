@@ -9,7 +9,14 @@
 目录:
 
 .. toctree::
-   :maxdepth: -1
+   :maxdepth: 2
 
+   setup
+   usage
    demo
-   test
+   rest
+   quickstart
+   quickref
+   cheatsheet
+   restructuredtext
+   directives
