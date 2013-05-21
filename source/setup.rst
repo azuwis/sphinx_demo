@@ -32,8 +32,8 @@ Linux(Debian/Ubuntu)
 
 ::
 
-# apt-get install python-sphinx python-pip
-# pip install livereload
+    # apt-get install python-sphinx python-pip
+    # pip install livereload
 
 Sphinx版本
 ----------

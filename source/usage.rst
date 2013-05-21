@@ -49,11 +49,11 @@ Sphinx工程的目录结构::
 `source/index.rst`\ 的\ `toctree`\ 决定了Sphinx处理.rst的顺序，比如::
 
     .. toctree::
-    :maxdepth: 2
+       :maxdepth: 2
 
-    setup
-    usage
-    demo
+       setup
+       usage
+       demo
 
 则可以看作把\ `setup.rst`\ 、\ `usage.rst`\ 、\ `demo.rst`\ 按顺序拼接起来，一般一个章节一个.rst文件。
 

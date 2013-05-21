@@ -22,11 +22,11 @@
 
 .. NOTE:: 中文占两个字符宽度。标题和标记并不强制要求对齐。
 
-    也可以用以下的形式::
+   也可以用以下的形式::
 
-        ====
-        标题
-        ====
+       ====
+       标题
+       ====
 
 段落
 ----
@@ -69,9 +69,9 @@
 
 .. NOTE:: 中文问题
 
-    reStructuredText的特殊标记一般需要两侧是空格或者行首末，英文用空格隔开单词，所以不需要作特殊处理。
+   reStructuredText的特殊标记一般需要两侧是空格或者行首末，英文用空格隔开单词，所以不需要作特殊处理。
 
-    而中文则很可能需要两侧添加\ ``\空格``\ 。
+   而中文则很可能需要两侧添加\ ``\空格``\ 。
 
 图片
 ----
@@ -162,33 +162,33 @@ ruby代码样例
 
     .. code-block:: ruby
 
-        #!/usr/bin/ruby
-        ...
+       #!/usr/bin/ruby
+       ...
 
 .. code-block:: ruby
 
-    #!/usr/bin/ruby
-    class Person
-      attr_reader :name, :age
-      def initialize(name, age)
-        @name, @age = name, age
-      end
-      def <=>(person) # Comparison operator for sorting
-        age <=> person.age
-      end
-      def to_s
-        "#{name} (#{age})"
-      end
-    end
+   #!/usr/bin/ruby
+   class Person
+     attr_reader :name, :age
+     def initialize(name, age)
+       @name, @age = name, age
+     end
+     def <=>(person) # Comparison operator for sorting
+       age <=> person.age
+     end
+     def to_s
+       "#{name} (#{age})"
+     end
+   end
 
-    # 中文注释
-    group = [
-      Person.new("Bob", 33),
-      Person.new("Chris", 16),
-      Person.new("Ash", 23)
-    ]
+   # 中文注释
+   group = [
+     Person.new("Bob", 33),
+     Person.new("Chris", 16),
+     Person.new("Ash", 23)
+   ]
 
-    puts group.sort.reverse
+   puts group.sort.reverse
 
 java代码样例
 ~~~~~~~~~~~~
@@ -197,27 +197,27 @@ java代码样例
 
     .. code-block:: java
 
-        // Hello.java
-        ...
+       // Hello.java
+       ...
 
 .. code-block:: java
 
-    // Hello.java
-    import java.io.*;
-    import javax.servlet.*;
+   // Hello.java
+   import java.io.*;
+   import javax.servlet.*;
 
-    public class Hello extends GenericServlet {
-        public void service(final ServletRequest request, final ServletResponse response)
-        throws ServletException, IOException {
-            response.setContentType("text/html");
-            final PrintWriter pw = response.getWriter();
-            try {
-                pw.println("Hello, world!");
-            } finally {
-                pw.close();
-            }
-        }
-    }
+   public class Hello extends GenericServlet {
+       public void service(final ServletRequest request, final ServletResponse response)
+       throws ServletException, IOException {
+           response.setContentType("text/html");
+           final PrintWriter pw = response.getWriter();
+           try {
+               pw.println("Hello, world!");
+           } finally {
+               pw.close();
+           }
+       }
+   }
 
 列表
 ----
@@ -236,7 +236,7 @@ java代码样例
 
     * 第二项
 
-        第二项说明(有缩进)
+          第二项说明(有缩进)
 
 * 第一项
 
@@ -247,7 +247,7 @@ java代码样例
 
 * 第二项
 
-    第二项说明(有缩进)
+      第二项说明(有缩进)
 
 有序列表
 ~~~~~~~~
@@ -263,7 +263,7 @@ java代码样例
 
     #. 第二项
 
-         第二项说明(有缩进)
+           第二项说明(有缩进)
 
 #. 第一项
 
@@ -274,7 +274,7 @@ java代码样例
 
 #. 第二项
 
-     第二项说明(有缩进)
+       第二项说明(有缩进)
 
 表格
 ----
@@ -331,12 +331,12 @@ java代码样例
 
 .. NOTE:: Vim 的\ `rst-tables <https://github.com/vim-scripts/rst-tables--Chao>`_\ 插件可以辅组表格生成和维护。
 
-    默认主题的表格看起来不大对，是因为下面的CSS样式导致的::
+   默认主题的表格看起来不大对，是因为下面的CSS样式导致的::
 
-        table.docutils td, table.docutils th {
-          border-style: none none solid;
-          border-width: 0 0 1px;
-        }
+       table.docutils td, table.docutils th {
+         border-style: none none solid;
+         border-width: 0 0 1px;
+       }
 
 列表表格(List-table)
 ~~~~~~~~~~~~~~~~~~~~
@@ -449,7 +449,7 @@ java代码样例
     .. WARNING:: WARNING
     .. admonition:: 自定义箴言
 
-        箴言内容
+       箴言内容
 
 .. ATTENTION:: ATTENTION
 .. CAUTION:: CAUTION
@@ -462,7 +462,7 @@ java代码样例
 .. WARNING:: WARNING
 .. admonition:: 自定义箴言
 
-    箴言内容
+   箴言内容
 
 替代(Substitution)
 ------------------
@@ -484,11 +484,11 @@ java代码样例
 
     .. raw:: html
 
-        <p>段落，<a href="http://example.com">链接</a></p>
+       <p>段落，<a href="http://example.com">链接</a></p>
 
 .. raw:: html
 
-    <p>段落，<a href="http://example.com">链接</a></p>
+   <p>段落，<a href="http://example.com">链接</a></p>
 
 自动生成目录
 ------------
