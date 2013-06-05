@@ -7,7 +7,7 @@ To generate HTML::
 
 To generate PDF::
 
-    # apt-get install --no-install-recommends texlive-xetex texlive-latex-recommended texlive-latex-extra lmodern ttf-wqy-microhei make
+    # apt-get install --no-install-recommends texlive-xetex texlive-latex-recommended texlive-latex-extra lmodern ttf-wqy-microhei
     $ make latexpdf
 
 To use `Livereload <https://github.com/mockko/livereload>`_::
