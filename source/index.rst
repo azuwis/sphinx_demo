@@ -9,6 +9,7 @@ Sphinx入门
 目录:
 
 .. toctree::
+   :numbered:
    :maxdepth: 2
 
    setup
