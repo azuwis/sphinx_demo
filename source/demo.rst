@@ -1,7 +1,8 @@
 样例
 ====
 
-.. contents::
+.. contents:: 本节内容
+   :local:
 
 标题
 ----
