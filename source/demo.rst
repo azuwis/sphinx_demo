@@ -509,6 +509,7 @@ java代码样例
 在\ `index.rst`\ 里添加类似下面的内容，生成的HTML及PDF会自动生成目录::
 
     .. toctree::
+       :numbered:
        :maxdepth: 2
 
        setup
@@ -517,7 +518,8 @@ java代码样例
 
 章节里用::
 
-    .. contents::
+    .. contents:: 本节内容
+       :local:
 
 来插入本章节的目录。
 
