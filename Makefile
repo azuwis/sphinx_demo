@@ -182,13 +182,17 @@ publish: html chm latexpdf
 	@echo "Publish finished."
 
 gh-pages: clean html
-	git checkout gh-pages || checkout --orphan gh-pages
+	$(eval TMP:=$(shell mktemp -d))
+	mv $(BUILDDIR)/html/* $(TMP)/
+	git checkout --orphan gh-pages || git checkout gh-pages
+	git rm -rf .
+	git clean -df
+	mv $(TMP)/* .
+	rmdir $(TMP)
 	touch .nojekyll
-	cp -r build/html/* .
-	rm -r build
 	git add .
+	git commit --amend -m 'gh-pages update' || git commit -m 'gh-pages update'
 
-push-github: gh-pages
-	git commit -m 'gh-pages update'
+push: gh-pages
 	git push --force origin gh-pages
 	git checkout master
