@@ -176,7 +176,6 @@ liveslides: slides
 
 publish: html chm latexpdf
 	@mkdir -p $(BUILDDIR)/html/_download
-	@cp $(BUILDDIR)/htmlhelp/*.chm $(BUILDDIR)/html/_download
 	@cp $(BUILDDIR)/latex/*.pdf $(BUILDDIR)/html/_download
 	@echo
 	@echo "Publish finished."
