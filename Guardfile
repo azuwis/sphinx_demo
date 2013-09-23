@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 from livereload.task import Task
-import subprocess
 import functools
 
 @functools.partial
