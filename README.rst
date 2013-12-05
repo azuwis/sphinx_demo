@@ -10,7 +10,7 @@ Generate HTML::
 
 Generate PDF::
 
-    # apt-get install --no-install-recommends texlive-xetex texlive-latex-recommended texlive-latex-extra lmodern fonts-linuxlibertine ttf-wqy-microhei
+    # apt-get install --no-install-recommends texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern fonts-linuxlibertine ttf-wqy-microhei
     $ make latexpdf
 
 Use `livereload`_ to preview HTML, install `livereload browser plugin`_, and::
