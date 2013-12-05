@@ -24,18 +24,20 @@
 
     git clone git://github.com/azuwis/sphinx_demo.git
 
-Sphinx基础
-----------
+如何使用模板
+------------
 
 Sphinx工程的目录结构::
 
     ├── Makefile
     ├── make.bat
     └── source
-        ├── conf.py         <-- 配置文件
-        ├── index.rst       <-- 文档入口
-        ├── *.rst           <-- 文档章节
-        └── images          <-- 静态资源，目录名可任意取
+        ├── conf.py         <-- 配置文件，按下面修改
+        ├── index.rst       <-- 文档入口，根据章节修改
+        ├── _templates      <-- 模板文件，不需要改动
+        ├── _themes         <-- 样式文件，不需要改动
+        ├── *.rst           <-- 文档章节，请删除
+        └── images          <-- 静态资源，根据引用路径取目录名，请删除此目录
            └── *.png
 
 编辑\ `source/conf.py`\ 里的以下部分::
@@ -74,6 +76,11 @@ Livereload只负责更新HTML和刷新浏览器，并不能自动打开对应页
 
 .. NOTE::
    Livereload默认使用8000端口，如果已经占用，编辑\ `Makefile`\ 和\ `make.bat`\ 更改。
+
+生成PDF
+-------
+
+需要在Linux上生成，并且需要安装额外的软件，详见\ `README.rst`\ 文件。
 
 注意事项
 --------
