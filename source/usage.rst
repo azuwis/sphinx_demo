@@ -33,9 +33,9 @@ Sphinx工程的目录结构::
     ├── make.bat
     └── source
         ├── conf.py         <-- 配置文件，按下面修改
-        ├── index.rst       <-- 文档入口，根据章节修改
         ├── _templates      <-- 模板文件，不需要改动
         ├── _themes         <-- 样式文件，不需要改动
+        ├── index.rst       <-- 文档入口，根据章节修改
         ├── *.rst           <-- 文档章节，请删除
         └── images          <-- 静态资源，根据引用路径取目录名，请删除此目录
            └── *.png
@@ -80,7 +80,7 @@ Livereload只负责更新HTML和刷新浏览器，并不能自动打开对应页
 生成PDF
 -------
 
-需要在Linux上生成，并且需要安装额外的软件，详见\ `README.rst`\ 文件。
+需要在Linux上生成，并且需要安装额外的软件，详见\ `README.rst <https://github.com/azuwis/sphinx_demo/blob/master/README.rst>`_\ 文件。
 
 注意事项
 --------
